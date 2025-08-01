@@ -15,7 +15,7 @@ return new class extends Migration {
             $table->foreignId('studio_id')->constrained('studios')->onDelete('cascade');
             $table->string('seat_row');
             $table->integer('seat_number');
-            $table->boolean('is_available');
+            $table->boolean('is_available')->default(true);
             $table->timestamps();
         });
     }
